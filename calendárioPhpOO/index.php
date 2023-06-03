@@ -27,6 +27,7 @@
             cursor: pointer;
         }
     </style>
+    <script src="script.js"></script>
 </head>
 <body>
     <h1>Paradise Hotel - Reservas</h1>
@@ -46,11 +47,11 @@
         }
     ?>
     <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
-        <label for="check_in_date">Data Check-in:</label>
-        <input type="date" name="check_in_date" required><br>
+    <label for="check_in_date">Data Check-in:</label>
+    <input type="date" id="check-in" name="check_in_date" onchange="habilitarCheckOut()" required><br>
 
         <label for="check_out_date">Data Check-out:</label>
-        <input type="date" name="check_out_date" required><br>
+        <input type="date"id="check-out" name="check_out_date" disabled><br>
         <br>
         <label for="business_trip">Viagem a Trabalho:</label> 
         <input type="checkbox" name="business_trip">
